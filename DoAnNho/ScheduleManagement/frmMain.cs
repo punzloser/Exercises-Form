@@ -84,5 +84,10 @@ namespace ScheduleManagement
         {
             MessageBox.Show("Nguyễn Hoàng Thanh","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

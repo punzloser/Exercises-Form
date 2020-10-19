@@ -112,14 +112,15 @@ namespace ScheduleManagement
             DataSet1.MonHocDataTable b = new DataSet1.MonHocDataTable();
             DataSet1TableAdapters.MonHocTableAdapter a = new DataSet1TableAdapters.MonHocTableAdapter();
             b.Reset();
+
             if (opt == "1")
             {
-                a.ThemMon(b, txtMaMon.Text, txtTenMon.Text, int.Parse(txtTongTiet.Text), int.Parse(txtSoTin.Text));
+                a.ThemMon(b, txtMaMon.Text, txtTenMon.Text, txtTongTiet.Text, txtSoTin.Text);
                 MessageBox.Show(b.Rows[0]["ErrMsg"].ToString(), "Thông báo");
             }
             else
             {
-                a.SuaMon(b, txtMaMon.Text, txtTenMon.Text, int.Parse(txtTongTiet.Text), int.Parse(txtSoTin.Text));
+                a.SuaMon(b, txtMaMon.Text, txtTenMon.Text, txtTongTiet.Text, txtSoTin.Text);
                 MessageBox.Show(b.Rows[0]["ErrMsg"].ToString(), "Thông báo");
             }
             loadForm();
