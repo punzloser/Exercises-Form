@@ -53,5 +53,11 @@ namespace ScheduleManagement
                 txtUsername.Focus();
             }
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            lbUsername.Enabled = false;
+            lbPassword.Enabled = false;
+        }
     }
 }
