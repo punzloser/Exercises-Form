@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{352509D5-031C-41DD-B52E-10B9E66B689B}</ProjectGuid>
+    <ProjectGuid>{5EB32B61-D1AA-42F5-B7EE-D5A1821EDE58}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ScheduleManagement</RootNamespace>
-    <AssemblyName>ScheduleManagement</AssemblyName>
+    <RootNamespace>Appdaotao</RootNamespace>
+    <AssemblyName>Appdaotao</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -51,97 +51,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frmChung.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChung.Designer.cs">
-      <DependentUpon>frmChung.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmXemThoiKhoaBieu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmXemThoiKhoaBieu.Designer.cs">
-      <DependentUpon>frmXemThoiKhoaBieu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_ChonThoiKhoaBieu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_ChonThoiKhoaBieu.Designer.cs">
-      <DependentUpon>frm_ChonThoiKhoaBieu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_GiaoVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_GiaoVien.Designer.cs">
-      <DependentUpon>frm_GiaoVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_Khoa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_Khoa.Designer.cs">
-      <DependentUpon>frm_Khoa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_Lop.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_Lop.Designer.cs">
-      <DependentUpon>frm_Lop.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_MonHoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_MonHoc.Designer.cs">
-      <DependentUpon>frm_MonHoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_PhongHoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_PhongHoc.Designer.cs">
-      <DependentUpon>frm_PhongHoc.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmChung.resx">
-      <DependentUpon>frmChung.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmXemThoiKhoaBieu.resx">
-      <DependentUpon>frmXemThoiKhoaBieu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_ChonThoiKhoaBieu.resx">
-      <DependentUpon>frm_ChonThoiKhoaBieu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_GiaoVien.resx">
-      <DependentUpon>frm_GiaoVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_Khoa.resx">
-      <DependentUpon>frm_Khoa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_Lop.resx">
-      <DependentUpon>frm_Lop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_MonHoc.resx">
-      <DependentUpon>frm_MonHoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_PhongHoc.resx">
-      <DependentUpon>frm_PhongHoc.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -152,7 +71,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="App.config" />
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
@@ -173,6 +91,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -3,23 +3,20 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Net.Configuration;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ScheduleManagement
 {
-    public partial class frmGiaoVien : Form
+    public partial class frm_GiaoVien : ScheduleManagement.frmChung
     {
         string opt = "";
-        public frmGiaoVien()
+        public frm_GiaoVien()
         {
             InitializeComponent();
         }
 
-        private void frmGiaoVien_Load(object sender, EventArgs e)
+        private void frm_GiaoVien_Load(object sender, EventArgs e)
         {
             lockDisplay();
             loadMaMon();
@@ -116,7 +113,7 @@ namespace ScheduleManagement
             showDisplay();
 
         }
-        
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.Rows.Count > 0)
@@ -179,5 +176,6 @@ namespace ScheduleManagement
                 lbMaMon.Text = cbbMaMon.SelectedValue.ToString();
             }
         }
+
     }
 }

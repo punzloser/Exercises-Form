@@ -3,22 +3,20 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ScheduleManagement
 {
-    public partial class frmMonHoc : Form
+    public partial class frm_MonHoc : ScheduleManagement.frmChung
     {
         string opt = "";
-        public frmMonHoc()
+        public frm_MonHoc()
         {
             InitializeComponent();
         }
 
-        private void frmMonHoc_Load(object sender, EventArgs e)
+        private void frm_MonHoc_Load(object sender, EventArgs e)
         {
             lockDisplay();
             loadForm();
@@ -146,5 +144,6 @@ namespace ScheduleManagement
         {
             this.Close();
         }
+
     }
 }

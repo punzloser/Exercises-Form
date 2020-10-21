@@ -79,7 +79,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 54);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1174, 60);
+            this.panel3.Size = new System.Drawing.Size(1288, 60);
             this.panel3.TabIndex = 0;
             // 
             // btnXem
@@ -87,7 +87,7 @@
             this.btnXem.BackColor = System.Drawing.Color.White;
             this.btnXem.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnXem.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXem.Location = new System.Drawing.Point(904, 0);
+            this.btnXem.Location = new System.Drawing.Point(1018, 0);
             this.btnXem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnXem.Name = "btnXem";
             this.btnXem.Size = new System.Drawing.Size(134, 58);
@@ -103,7 +103,7 @@
             this.btnExit.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(1038, 0);
+            this.btnExit.Location = new System.Drawing.Point(1152, 0);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(134, 58);
@@ -179,14 +179,14 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1174, 54);
+            this.panel1.Size = new System.Drawing.Size(1288, 54);
             this.panel1.TabIndex = 29;
             // 
             // frmXemThoiKhoaBieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1174, 594);
+            this.ClientSize = new System.Drawing.Size(1288, 594);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.panel1);

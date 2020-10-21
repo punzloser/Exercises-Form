@@ -26,7 +26,7 @@ namespace ScheduleManagement
 
         private void khoaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmKhoa a = new frmKhoa();
+            frm_Khoa a = new frm_Khoa();
             a.MdiParent = this;
             a.WindowState = FormWindowState.Maximized;
             a.Show();
@@ -34,7 +34,7 @@ namespace ScheduleManagement
 
         private void phòngHọcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPhongHoc a = new frmPhongHoc();
+            frm_PhongHoc a = new frm_PhongHoc();
             a.MdiParent = this;
             a.WindowState = FormWindowState.Maximized;
             a.Show();
@@ -42,7 +42,7 @@ namespace ScheduleManagement
 
         private void giáoViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmGiaoVien a = new frmGiaoVien();
+            frm_GiaoVien a = new frm_GiaoVien();
             a.MdiParent = this;
             a.WindowState = FormWindowState.Maximized;
             a.Show();
@@ -50,7 +50,7 @@ namespace ScheduleManagement
 
         private void lớpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmLop a = new frmLop();
+            frm_Lop a = new frm_Lop();
             a.MdiParent = this;
             a.WindowState = FormWindowState.Maximized;
             a.Show();
@@ -58,7 +58,7 @@ namespace ScheduleManagement
 
         private void mônHọcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMonHoc a = new frmMonHoc();
+            frm_MonHoc a = new frm_MonHoc();
             a.MdiParent = this;
             a.WindowState = FormWindowState.Maximized;
             a.Show();
@@ -66,7 +66,7 @@ namespace ScheduleManagement
 
         private void xếpThờiKhóaBiểuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmChonThoiKhoaBieu a = new frmChonThoiKhoaBieu();
+            frm_ChonThoiKhoaBieu a = new frm_ChonThoiKhoaBieu();
             a.MdiParent = this;
             a.WindowState = FormWindowState.Maximized;
             a.Show();

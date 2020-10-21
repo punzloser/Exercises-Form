@@ -3,22 +3,20 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ScheduleManagement
 {
-    public partial class frmChonThoiKhoaBieu : Form
+    public partial class frm_ChonThoiKhoaBieu : ScheduleManagement.frmChung
     {
         string opt = "";
-        public frmChonThoiKhoaBieu()
+        public frm_ChonThoiKhoaBieu()
         {
             InitializeComponent();
         }
 
-        private void frmChonThoiKhoaBieu_Load(object sender, EventArgs e)
+        private void frm_ChonThoiKhoaBieu_Load(object sender, EventArgs e)
         {
             lockDisplay();
 
@@ -101,7 +99,7 @@ namespace ScheduleManagement
             cbbMaPhong.ValueMember = "TenPhong";
             cbbMaPhong.DisplayMember = "MaPhong";
             DataSet1.PhongHocDataTable b = new DataSet1.PhongHocDataTable();
-            DataSet1TableAdapters.PhongHocTableAdapter a = new DataSet1TableAdapters.PhongHocTableAdapter(); 
+            DataSet1TableAdapters.PhongHocTableAdapter a = new DataSet1TableAdapters.PhongHocTableAdapter();
             b.Reset();
             a.Fill(b);
             cbbMaPhong.DataSource = b;
@@ -158,7 +156,7 @@ namespace ScheduleManagement
 
         private void cbbMaGV_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbbMaGV.SelectedIndex >=0)
+            if (cbbMaGV.SelectedIndex >= 0)
             {
                 lbMaGV.Text = cbbMaGV.Text + " - " + cbbMaGV.SelectedValue.ToString();
             }

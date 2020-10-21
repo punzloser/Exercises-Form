@@ -3,23 +3,20 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ScheduleManagement
 {
-    public partial class frmPhongHoc : Form
+    public partial class frm_PhongHoc : ScheduleManagement.frmChung
     {
         string opt = "";
-        public frmPhongHoc()
+        public frm_PhongHoc()
         {
             InitializeComponent();
         }
 
-        private void frmPhongHoc_Load(object sender, EventArgs e)
+        private void frm_PhongHoc_Load(object sender, EventArgs e)
         {
             lockDisplay();
             loadFrom();
@@ -122,7 +119,6 @@ namespace ScheduleManagement
                 MessageBox.Show(b.Rows[0]["ErrMsg"].ToString(), "Thông báo");
             }
             loadFrom();
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

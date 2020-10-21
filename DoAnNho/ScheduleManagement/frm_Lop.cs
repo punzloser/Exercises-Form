@@ -3,22 +3,20 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ScheduleManagement
 {
-    public partial class frmLop : Form
+    public partial class frm_Lop : ScheduleManagement.frmChung
     {
         string opt = "";
-        public frmLop()
+        public frm_Lop()
         {
             InitializeComponent();
         }
 
-        private void frmLop_Load(object sender, EventArgs e)
+        private void frm_Lop_Load(object sender, EventArgs e)
         {
             lockDisplay();
             loadMaKhoa();
@@ -154,7 +152,7 @@ namespace ScheduleManagement
             loadForm();
         }
 
-        private void cbbMaKhoa_SelectedValueChanged(object sender, EventArgs e)
+        private void cbbMaKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbbMaKhoa.SelectedIndex >= 0)
             {
@@ -162,7 +160,7 @@ namespace ScheduleManagement
             }
         }
 
-        private void btnExit_Click_1(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }

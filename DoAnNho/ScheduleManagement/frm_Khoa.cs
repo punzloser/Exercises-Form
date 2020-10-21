@@ -3,22 +3,20 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ScheduleManagement
 {
-    public partial class frmKhoa : Form
+    public partial class frm_Khoa : ScheduleManagement.frmChung
     {
         string opt = "";
-        public frmKhoa()
+        public frm_Khoa()
         {
-            InitializeComponent();     
+            InitializeComponent();
         }
 
-        private void frmKhoa_Load(object sender, EventArgs e)
+        private void frm_Khoa_Load(object sender, EventArgs e)
         {
             lockDisplay();
             loadForm();
@@ -98,7 +96,7 @@ namespace ScheduleManagement
             DataSet1.KhoaDataTable b = new DataSet1.KhoaDataTable();
             DataSet1TableAdapters.KhoaTableAdapter a = new DataSet1TableAdapters.KhoaTableAdapter();
             b.Reset();
-            
+
             if (opt == "1")
             {
                 a.ThemKhoa(b, txtMaKhoa.Text, txtTenKhoa.Text, txtDienThoai.Text, txtEmail.Text);
@@ -107,7 +105,7 @@ namespace ScheduleManagement
             else
             {
                 a.SuaKhoa(b, txtMaKhoa.Text, txtTenKhoa.Text, txtDienThoai.Text, txtEmail.Text);
-                MessageBox.Show(b.Rows[0]["ErrMsg"].ToString(), "Thông báo");     
+                MessageBox.Show(b.Rows[0]["ErrMsg"].ToString(), "Thông báo");
             }
             loadForm();
         }
@@ -144,5 +142,6 @@ namespace ScheduleManagement
         {
             this.Close();
         }
+
     }
 }
