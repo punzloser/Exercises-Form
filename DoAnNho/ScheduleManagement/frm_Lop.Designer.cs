@@ -106,7 +106,6 @@
             this.cbbMaKhoa.Name = "cbbMaKhoa";
             this.cbbMaKhoa.Size = new System.Drawing.Size(121, 28);
             this.cbbMaKhoa.TabIndex = 15;
-            this.cbbMaKhoa.SelectedIndexChanged += new System.EventHandler(this.cbbMaKhoa_SelectedIndexChanged);
             // 
             // label8
             // 
