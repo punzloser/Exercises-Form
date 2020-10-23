@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ScheduleManagementConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ScheduleManagementConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ScheduleManagement.Properties.Settings.GlobalReference.Default.ScheduleManagementConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ScheduleManagementConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ScheduleManagementConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ScheduleManagement.Properties.Settings.GlobalReference.Default.ScheduleManagementConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DangNhapTableAdapter" GeneratorDataComponentClassName="DangNhapTableAdapter" Name="DangNhap" UserDataComponentName="DangNhapTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.DangNhap" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.DangNhap" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[DangNhap] WHERE (([ID] = @Original_ID) AND ((@IsNull_Pass = 1 AND [Pass] IS NULL) OR ([Pass] = @Original_Pass)) AND ((@IsNull_Quyen = 1 AND [Quyen] IS NULL) OR ([Quyen] = @Original_Quyen)))</CommandText>
@@ -63,7 +63,7 @@ SELECT ID, Pass, Quyen FROM DangNhap WHERE (ID = @ID)</CommandText>
               <Mapping SourceColumn="Quyen" DataSetColumn="Quyen" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.DN" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="DN" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="DN" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DN">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.DN" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="DN" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="DN" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DN">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.DN</CommandText>
@@ -79,7 +79,7 @@ SELECT ID, Pass, Quyen FROM DangNhap WHERE (ID = @ID)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GiaoVienTableAdapter" GeneratorDataComponentClassName="GiaoVienTableAdapter" Name="GiaoVien" UserDataComponentName="GiaoVienTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.GiaoVien" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.GiaoVien" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[GiaoVien] WHERE (([MaGV] = @Original_MaGV) AND ((@IsNull_TenGV = 1 AND [TenGV] IS NULL) OR ([TenGV] = @Original_TenGV)) AND ((@IsNull_DiaChi = 1 AND [DiaChi] IS NULL) OR ([DiaChi] = @Original_DiaChi)) AND ((@IsNull_NgaySinh = 1 AND [NgaySinh] IS NULL) OR ([NgaySinh] = @Original_NgaySinh)) AND ((@IsNull_GT = 1 AND [GT] IS NULL) OR ([GT] = @Original_GT)) AND ([MaMon] = @Original_MaMon) AND ((@IsNull_ChuyenNganh = 1 AND [ChuyenNganh] IS NULL) OR ([ChuyenNganh] = @Original_ChuyenNganh)))</CommandText>
@@ -159,7 +159,7 @@ SELECT MaGV, TenGV, DiaChi, NgaySinh, GT, MaMon, ChuyenNganh FROM GiaoVien WHERE
               <Mapping SourceColumn="ChuyenNganh" DataSetColumn="ChuyenNganh" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.SuaGiaoVien" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="SuaGiaoVien" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SuaGiaoVien" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SuaGiaoVien">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.SuaGiaoVien" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="SuaGiaoVien" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SuaGiaoVien" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SuaGiaoVien">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.SuaGiaoVien</CommandText>
@@ -176,7 +176,7 @@ SELECT MaGV, TenGV, DiaChi, NgaySinh, GT, MaMon, ChuyenNganh FROM GiaoVien WHERE
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.ThemGiaoVien" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="ThemGiaoVien" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="ThemGiaoVien" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ThemGiaoVien">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.ThemGiaoVien" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="ThemGiaoVien" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="ThemGiaoVien" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ThemGiaoVien">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ThemGiaoVien</CommandText>
@@ -193,7 +193,7 @@ SELECT MaGV, TenGV, DiaChi, NgaySinh, GT, MaMon, ChuyenNganh FROM GiaoVien WHERE
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.XoaGiaoVien" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="XoaGiaoVien" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="XoaGiaoVien" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="XoaGiaoVien">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.XoaGiaoVien" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="XoaGiaoVien" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="XoaGiaoVien" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="XoaGiaoVien">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.XoaGiaoVien</CommandText>
@@ -208,7 +208,7 @@ SELECT MaGV, TenGV, DiaChi, NgaySinh, GT, MaMon, ChuyenNganh FROM GiaoVien WHERE
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="KhoaTableAdapter" GeneratorDataComponentClassName="KhoaTableAdapter" Name="Khoa" UserDataComponentName="KhoaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.Khoa" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.Khoa" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Khoa] WHERE (([MaKhoa] = @Original_MaKhoa) AND ((@IsNull_TenKhoa = 1 AND [TenKhoa] IS NULL) OR ([TenKhoa] = @Original_TenKhoa)) AND ((@IsNull_DienThoai = 1 AND [DienThoai] IS NULL) OR ([DienThoai] = @Original_DienThoai)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)))</CommandText>
@@ -269,7 +269,7 @@ SELECT MaKhoa, TenKhoa, DienThoai, Email FROM Khoa WHERE (MaKhoa = @MaKhoa)</Com
               <Mapping SourceColumn="Email" DataSetColumn="Email" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.SuaKhoa" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="SuaKhoa" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SuaKhoa" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SuaKhoa">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.SuaKhoa" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="SuaKhoa" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SuaKhoa" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SuaKhoa">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.SuaKhoa</CommandText>
@@ -283,7 +283,7 @@ SELECT MaKhoa, TenKhoa, DienThoai, Email FROM Khoa WHERE (MaKhoa = @MaKhoa)</Com
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.ThemKhoa" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="ThemKhoa" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="ThemKhoa" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ThemKhoa">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.ThemKhoa" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="ThemKhoa" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="ThemKhoa" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ThemKhoa">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ThemKhoa</CommandText>
@@ -297,7 +297,7 @@ SELECT MaKhoa, TenKhoa, DienThoai, Email FROM Khoa WHERE (MaKhoa = @MaKhoa)</Com
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.XoaKhoa" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="XoaKhoa" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="XoaKhoa" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="XoaKhoa">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.XoaKhoa" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="XoaKhoa" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="XoaKhoa" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="XoaKhoa">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.XoaKhoa</CommandText>
@@ -312,7 +312,7 @@ SELECT MaKhoa, TenKhoa, DienThoai, Email FROM Khoa WHERE (MaKhoa = @MaKhoa)</Com
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LopTableAdapter" GeneratorDataComponentClassName="LopTableAdapter" Name="Lop" UserDataComponentName="LopTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.Lop" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.Lop" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Lop] WHERE (([MaLop] = @Original_MaLop) AND ((@IsNull_TenLop = 1 AND [TenLop] IS NULL) OR ([TenLop] = @Original_TenLop)) AND ((@IsNull_SiSo = 1 AND [SiSo] IS NULL) OR ([SiSo] = @Original_SiSo)) AND ([MaKhoa] = @Original_MaKhoa))</CommandText>
@@ -371,7 +371,7 @@ SELECT MaLop, TenLop, SiSo, MaKhoa FROM Lop WHERE (MaLop = @MaLop)</CommandText>
               <Mapping SourceColumn="MaKhoa" DataSetColumn="MaKhoa" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.SuaLop" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="SuaLop" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SuaLop" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SuaLop">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.SuaLop" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="SuaLop" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SuaLop" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SuaLop">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.SuaLop</CommandText>
@@ -385,7 +385,7 @@ SELECT MaLop, TenLop, SiSo, MaKhoa FROM Lop WHERE (MaLop = @MaLop)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.ThemLop" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="ThemLop" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="ThemLop" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ThemLop">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.ThemLop" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="ThemLop" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="ThemLop" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ThemLop">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ThemLop</CommandText>
@@ -399,7 +399,7 @@ SELECT MaLop, TenLop, SiSo, MaKhoa FROM Lop WHERE (MaLop = @MaLop)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.XoaLop" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="XoaLop" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="XoaLop" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="XoaLop">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.XoaLop" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="XoaLop" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="XoaLop" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="XoaLop">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.XoaLop</CommandText>
@@ -414,7 +414,7 @@ SELECT MaLop, TenLop, SiSo, MaKhoa FROM Lop WHERE (MaLop = @MaLop)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MonHocTableAdapter" GeneratorDataComponentClassName="MonHocTableAdapter" Name="MonHoc" UserDataComponentName="MonHocTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.MonHoc" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.MonHoc" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[MonHoc] WHERE (([MaMon] = @Original_MaMon) AND ((@IsNull_TenMon = 1 AND [TenMon] IS NULL) OR ([TenMon] = @Original_TenMon)) AND ((@IsNull_TongTiet = 1 AND [TongTiet] IS NULL) OR ([TongTiet] = @Original_TongTiet)) AND ((@IsNull_SoTin = 1 AND [SoTin] IS NULL) OR ([SoTin] = @Original_SoTin)))</CommandText>
@@ -475,7 +475,7 @@ SELECT MaMon, TenMon, TongTiet, SoTin FROM MonHoc WHERE (MaMon = @MaMon)</Comman
               <Mapping SourceColumn="SoTin" DataSetColumn="SoTin" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.SuaMon" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="SuaMon" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SuaMon" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SuaMon">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.SuaMon" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="SuaMon" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SuaMon" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SuaMon">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.SuaMon</CommandText>
@@ -489,7 +489,7 @@ SELECT MaMon, TenMon, TongTiet, SoTin FROM MonHoc WHERE (MaMon = @MaMon)</Comman
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.ThemMon" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="ThemMon" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="ThemMon" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ThemMon">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.ThemMon" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="ThemMon" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="ThemMon" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ThemMon">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ThemMon</CommandText>
@@ -503,7 +503,7 @@ SELECT MaMon, TenMon, TongTiet, SoTin FROM MonHoc WHERE (MaMon = @MaMon)</Comman
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.XoaMon" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="XoaMon" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="XoaMon" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="XoaMon">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.XoaMon" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="XoaMon" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="XoaMon" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="XoaMon">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.XoaMon</CommandText>
@@ -518,7 +518,7 @@ SELECT MaMon, TenMon, TongTiet, SoTin FROM MonHoc WHERE (MaMon = @MaMon)</Comman
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PhongHocTableAdapter" GeneratorDataComponentClassName="PhongHocTableAdapter" Name="PhongHoc" UserDataComponentName="PhongHocTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.PhongHoc" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.PhongHoc" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[PhongHoc] WHERE (([MaPhong] = @Original_MaPhong) AND ((@IsNull_TenPhong = 1 AND [TenPhong] IS NULL) OR ([TenPhong] = @Original_TenPhong)) AND ((@IsNull_ChucNang = 1 AND [ChucNang] IS NULL) OR ([ChucNang] = @Original_ChucNang)) AND ((@IsNull_SucChua = 1 AND [SucChua] IS NULL) OR ([SucChua] = @Original_SucChua)))</CommandText>
@@ -579,7 +579,7 @@ SELECT MaPhong, TenPhong, ChucNang, SucChua FROM PhongHoc WHERE (MaPhong = @MaPh
               <Mapping SourceColumn="SucChua" DataSetColumn="SucChua" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.SuaPhong" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="SuaPhong" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SuaPhong" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SuaPhong">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.SuaPhong" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="SuaPhong" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SuaPhong" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SuaPhong">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.SuaPhong</CommandText>
@@ -593,7 +593,7 @@ SELECT MaPhong, TenPhong, ChucNang, SucChua FROM PhongHoc WHERE (MaPhong = @MaPh
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.ThemPhong" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="ThemPhong" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="ThemPhong" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ThemPhong">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.ThemPhong" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="ThemPhong" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="ThemPhong" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ThemPhong">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ThemPhong</CommandText>
@@ -607,7 +607,7 @@ SELECT MaPhong, TenPhong, ChucNang, SucChua FROM PhongHoc WHERE (MaPhong = @MaPh
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.XoaPhong" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="XoaPhong" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="XoaPhong" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="XoaPhong">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.XoaPhong" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="XoaPhong" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="XoaPhong" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="XoaPhong">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.XoaPhong</CommandText>
@@ -622,7 +622,7 @@ SELECT MaPhong, TenPhong, ChucNang, SucChua FROM PhongHoc WHERE (MaPhong = @MaPh
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TKBTableAdapter" GeneratorDataComponentClassName="TKBTableAdapter" Name="TKB" UserDataComponentName="TKBTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.TKB" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.TKB" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[TKB] WHERE (((@IsNull_Ngay = 1 AND [Ngay] IS NULL) OR ([Ngay] = @Original_Ngay)) AND ([MaGV] = @Original_MaGV) AND ([MaLop] = @Original_MaLop) AND ([MaMon] = @Original_MaMon) AND ([MaPhong] = @Original_MaPhong) AND ((@IsNull_Buoi = 1 AND [Buoi] IS NULL) OR ([Buoi] = @Original_Buoi)))</CommandText>
@@ -691,7 +691,7 @@ SELECT Ngay, MaGV, MaLop, MaMon, MaPhong, Buoi FROM TKB WHERE (MaGV = @MaGV) AND
               <Mapping SourceColumn="Buoi" DataSetColumn="Buoi" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.ChonTKBTheoMaGV" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="ChonTKBTheoMaGV" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="ChonTKBTheoMaGV" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ChonTKBTheoMaGV">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.ChonTKBTheoMaGV" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="ChonTKBTheoMaGV" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="ChonTKBTheoMaGV" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="ChonTKBTheoMaGV">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ChonTKBTheoMaGV</CommandText>
@@ -702,7 +702,7 @@ SELECT Ngay, MaGV, MaLop, MaMon, MaPhong, Buoi FROM TKB WHERE (MaGV = @MaGV) AND
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.SuaTKB" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="SuaTKB" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SuaTKB" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="SuaTKB">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.SuaTKB" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="SuaTKB" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SuaTKB" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SuaTKB">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.SuaTKB</CommandText>
@@ -718,7 +718,7 @@ SELECT Ngay, MaGV, MaLop, MaMon, MaPhong, Buoi FROM TKB WHERE (MaGV = @MaGV) AND
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.ThemTKB" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="ThemTKB" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="ThemTKB" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ThemTKB">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.ThemTKB" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="ThemTKB" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="ThemTKB" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ThemTKB">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ThemTKB</CommandText>
@@ -734,7 +734,7 @@ SELECT Ngay, MaGV, MaLop, MaMon, MaPhong, Buoi FROM TKB WHERE (MaGV = @MaGV) AND
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.XemTKB" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="XemTKB" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="XemTKB" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="XemTKB">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.XemTKB" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="XemTKB" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="XemTKB" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="XemTKB">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.XemTKB</CommandText>
@@ -746,7 +746,7 @@ SELECT Ngay, MaGV, MaLop, MaMon, MaPhong, Buoi FROM TKB WHERE (MaGV = @MaGV) AND
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ScheduleManagementConnectionString2 (Settings)" DbObjectName="ScheduleManagement.dbo.XoaTKB" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="XoaTKB" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="XoaTKB" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="XoaTKB">
+              <DbSource ConnectionRef="ScheduleManagementConnectionString (Settings)" DbObjectName="ScheduleManagement.dbo.XoaTKB" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="XoaTKB" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="XoaTKB" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="XoaTKB">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.XoaTKB</CommandText>
